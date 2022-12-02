@@ -1,27 +1,14 @@
 with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day01_input.txt") as d:
-    d_str = d.read()
-    d_list = d_str.split("\n")
+    d_list = d.read().split("\n")
 
 sub_total = 0
-cals_per_elf = []
+cals_per_elf = [sub_total := sub_total + int(x) if x != "" else (sub_total := 0) for x in d_list]
 
-for cals in d_list:
-    if cals == "":
-        cals_per_elf.append(sub_total)
-        sub_total = 0
-    else:
-        sub_total += int(cals)
-
-# answer to problem 1.1
 answer_1 = max(cals_per_elf)
 
 cals_per_elf.sort(reverse=True)
-cals_top_3 = 0
-for i in range(3):
-    cals_top_3 += cals_per_elf[i]
 
-# answer to problem 1.2
-answer_2 = cals_top_3
+answer_2 = sum(cals_per_elf[0:3])
 
-print(answer_1)
-print(answer_2)
+print(f'Answer one is: {answer_1}')
+print(f'Answer two is: {answer_2}')
