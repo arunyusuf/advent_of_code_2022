@@ -1,14 +1,14 @@
-with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day01_input.txt") as d:
-    d_list = d.read().split("\n")
+def day_01():
+    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day01_input.txt") as d:
+        d_list = d.read().split("\n")
 
-sub_total = 0
-cals_per_elf = [sub_total := sub_total + int(x) if x != "" else (sub_total := 0) for x in d_list]
+    sub_total = 0
+    cals_per_elf = [sub_total := sub_total + int(x) if x != "" else (sub_total := 0) for x in d_list]
 
-answer_1 = max(cals_per_elf)
+    answer_1 = max(cals_per_elf)
 
-cals_per_elf.sort(reverse=True)
+    cals_per_elf.sort(reverse=True)
 
-answer_2 = sum(cals_per_elf[0:3])
+    answer_2 = sum(cals_per_elf[0:3])
 
-print(f'Answer one is: {answer_1}')
-print(f'Answer two is: {answer_2}')
+    return answer_1, answer_2
