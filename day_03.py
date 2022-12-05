@@ -1,5 +1,5 @@
 def day_03():
-    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day03_input.txt") as d:
+    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day_03_input.txt") as d:
         d_list = d.read().split("\n")
 
     answer_1 = 0

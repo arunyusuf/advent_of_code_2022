@@ -1,5 +1,5 @@
 def day_02():
-    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day02_input.txt") as d:
+    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day_02_input.txt") as d:
         d_list = d.read().lower().split("\n")
 
     answer_1 = 0
@@ -41,7 +41,7 @@ def day_02():
 
 
 def day_02_v2():
-    with open("/Users/arun.yusuf/PycharmProjects/advent_of_code_2022/day02_input.txt") as d:
+    with open("/day_02_input.txt") as d:
         d_list = d.read().lower().split("\n")
 
     scores = {
