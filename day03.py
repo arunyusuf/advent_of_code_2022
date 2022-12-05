@@ -33,12 +33,3 @@ def day_03():
             counter = 0
 
     return answer_1, answer_2
-
-
-test = day_03()
-
-print(test)
-
-x = 0
-x += 1
-print(x)
